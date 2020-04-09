@@ -1,12 +1,12 @@
 import React, { Fragment } from "react";
-
 import { Switch } from 'react-router-dom';
+import { NotificationContainer, NotificationManager } from 'react-notifications';
 import { RouteWithSubRoutes } from './routers/index'
 import InputTodo from "./components/InputTodo";
 import ListTodos from "./components/ListTodos";
 
-
 import "./App.css";
+import 'react-notifications/lib/notifications.css';
 
 function App(props) {
   console.log('appjs')
@@ -15,6 +15,7 @@ function App(props) {
       <div className="container">
         <InputTodo />
         <ListTodos />
+        <NotificationContainer/>
       </div>
       <Switch>
         {props.routes.map((route, i) => (
