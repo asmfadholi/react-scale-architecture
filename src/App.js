@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { Switch } from 'react-router-dom';
-import { NotificationContainer, NotificationManager } from 'react-notifications';
+import { NotificationContainer } from 'react-notifications';
 import { RouteWithSubRoutes } from './routers/index'
 import InputTodo from "./components/InputTodo";
 import ListTodos from "./components/ListTodos";

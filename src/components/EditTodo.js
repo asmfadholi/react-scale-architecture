@@ -53,7 +53,6 @@ const EditTodo = ({ todo, editTodo, detailTodo }) => {
           <button
             type="button"
             className="btn btn-warning"
-            data-dismiss="modal"
             onClick={() => onSubmit(todo.todo_id)}
           >
             Edit
@@ -61,8 +60,7 @@ const EditTodo = ({ todo, editTodo, detailTodo }) => {
           <button
             type="button"
             className="btn btn-danger"
-            data-dismiss="modal"
-            onClick={() => handleClose}
+            onClick={() => handleClose()}
           >
             Close
           </button>
