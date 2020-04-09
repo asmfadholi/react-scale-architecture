@@ -1,4 +1,3 @@
-import axios from 'axios'
 import Api from '../../services/index'
 
 const pre = 'StoreTodo'
@@ -32,7 +31,7 @@ export default {
     addTodo(req) {
         return async (dispatch) => {
             try {
-                const res = await Api.addTodo(req)
+                await Api.addTodo(req)
                 dispatch(this.getListTodo());
             } catch (err) {
                 throw err
@@ -54,7 +53,7 @@ export default {
     editTodo(req) {
         return async (dispatch) => {
             try {
-                const res = await Api.editTodo(req)
+                await Api.editTodo(req)
                 dispatch(this.getListTodo());
             } catch (err) {
                 throw err
@@ -65,7 +64,7 @@ export default {
     deleteTodo(req) {
         return async (dispatch) => {
             try {
-                const res = await Api.deleteTodo(req)
+                await Api.deleteTodo(req)
                 dispatch(this.getListTodo());
             } catch (err) {
                 throw err

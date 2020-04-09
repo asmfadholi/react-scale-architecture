@@ -24,8 +24,8 @@ const EditTodo = ({ todo, editTodo, detailTodo }) => {
   }
 
   useEffect(() => {
-    detailTodo({ id })
-  }, []);
+    detailTodo({ id: id })
+  }, [detailTodo, id]);
 
   useEffect(() => {
     if (todo) {

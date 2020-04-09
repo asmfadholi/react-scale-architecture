@@ -1,16 +1,15 @@
-import React, { Fragment, useState, useEffect } from "react";
+import React, { Fragment, useEffect } from "react";
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux';
 import Action from '../actions/index'
-import EditTodo from "./EditTodo";
+
 
 const ListTodos = (props) => {
-  // const [todos, setTodos] = useState([]);
-
+  const { getListTodo } = props;
   useEffect(() => {
     console.log('list, use effect')
-    props.getListTodo();
-  }, []);
+    getListTodo();
+  }, [getListTodo]);
 
   console.log('list', 'rerender')
 
